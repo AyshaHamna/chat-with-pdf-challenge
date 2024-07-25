@@ -15,7 +15,7 @@ function PlaceHolderDocument() {
   return (
     <Button
       onClick={handleClick}
-      className="flex flex-col items-center justify-center w-64 h-80 rounded-xl bg-gray-200 drop-shadow-md text-gray-400"
+      className="flex flex-col items-center justify-center w-64 h-80 rounded-xl bg-gray-200 drop-shadow-md text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-500"
     >
       <PlusCircleIcon className="h-16 w-16" />
       <p>Add a document</p>

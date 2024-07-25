@@ -1,4 +1,6 @@
+import { ToggleTheme } from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/button";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import {
   BrainCogIcon,
   EyeIcon,
@@ -52,13 +54,17 @@ const features = [
 export default function Home() {
   return (
     <main className="flex-1 overflow-scroll p-2 lg:p-5 bg-gradient-to-bl from-white to-indigo-600">
-      <div className="bg-white py-24 sm:py-32 rounded-md drop-shadow-xl">
+      <div className="relative bg-white py-24 sm:py-32 rounded-md drop-shadow-xl dark:bg-gray-900">
+        <div className="absolute top-0 right-0 p-5">
+          <ToggleTheme />
+        </div>
+
         <div className="flex flex-col justify-center items-center mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="text-indigo-700 font-semibold text-base leading-7">
               Your Interactive Document Companion
             </h2>
-            <p className="mt-2 text-3xl tracking-tight font-bold text-gray-900 sm:text-6xl">
+            <p className="mt-2 text-3xl tracking-tight font-bold text-gray-900 sm:text-6xl dark:text-white">
               Transform Your PDFs into Interactive Conversations
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -74,9 +80,20 @@ export default function Home() {
               enhancing productivity 10x fold effortlessly.
             </p>
           </div>
-          <Button asChild className="mt-10">
+          <Button asChild className="mt-10 dark:bg-white dark:text-gray-800">
             <Link href="/dashboard">Get Started</Link>
           </Button>
+
+          {/* 
+          <SignedOut>
+            <SignInButton>
+              <Button size="sm">Sign in</Button>
+            </SignInButton>
+          </SignedOut>
+
+          <SignedIn>
+            <UserButton />
+          </SignedIn> */}
         </div>
 
         <div className="relative overflow-hidden pt-16">
