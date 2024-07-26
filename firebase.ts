@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDVKkgmkC7xkK6Ur80ts0AzwUZoL2FNDEk",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "chat-with-pdf--challenge.firebaseapp.com",
   projectId: "chat-with-pdf--challenge",
   storageBucket: "chat-with-pdf--challenge.appspot.com",
