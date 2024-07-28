@@ -41,7 +41,7 @@ function Document({
       <div className="flex space-x-2 justify-end">
         <Button
           variant="outline"
-          disabled={!isDeleting || !hasActiveMembership}
+          disabled={isDeleting || !hasActiveMembership}
           onClick={() => {
             const prompt = window.confirm(
               "Are you sure you want to delete this document?"
