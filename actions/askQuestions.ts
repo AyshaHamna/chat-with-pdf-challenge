@@ -5,8 +5,8 @@ import { adminDb } from "@/firebaseAdmin";
 import { generateLangchainCompletion } from "@/lib/langchain";
 import { auth } from "@clerk/nextjs/server";
 
-const PRO_LIMIT = 2;
-const FREE_LIMIT = 20;
+const FREE_LIMIT = 2;
+const PRO_LIMIT = 20;
 
 export async function askQuestions(id: string, question: string) {
   auth().protect();
